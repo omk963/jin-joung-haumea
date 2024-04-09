@@ -1,0 +1,33 @@
+* {
+    color:rgb(0, 4, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(130, 240, 225) , rgb(137, 159, 255));;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+
+h2 {
+    border: 1px rgb(0, 0, 0) dashed;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 25px;
+    text-shadow: 5px 5px 15px rgb(255, 239, 239);
+}
+
+#about {
+    margin-left: 35px;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
