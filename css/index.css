@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right, rgb(130, 240, 225) , rgb(137, 159, 255));;
+    background-image: linear-gradient(to right, rgb(130, 240, 225) , rgb(137, 159, 255));
 }
 
 nav ul {
@@ -12,7 +12,6 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
 }
 
 nav a {
@@ -42,4 +41,43 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    * {
+        color:rgb(255, 1, 1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+    body {
+        background-image: linear-gradient(to right, rgb(240, 130, 180) , rgb(249, 255, 137));
+    }
+    
+    nav ul {
+        display: grid;
+        grid: auto / auto auto auto;
+        grid-row-gap: 10px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1600px) and (orientation: portrait) {
+    * {
+        color:rgba(0, 97, 19, 0.956);
+        font-family:monospace;
+        font-size: 18px;
+    }
+    
+    body {
+        background-image: linear-gradient(to right, rgb(130, 240, 148) , rgb(137, 233, 255));
+    }
+
+    nav li {
+        border: 5px black double;
+        padding: 5px;
+        border-radius: 10px;
+    }
 }
