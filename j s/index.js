@@ -39,11 +39,39 @@ messageForm.addEventListener('submit', (event) => {
     removeButton.type = 'button';
 
     removeButton.addEventListener('click', () => {
-        const entry = removeButton.parentNode;
-        entry.removeChild();
+        let entry = removeButton.parentNode;
+        entry.parentNode.removeChild(entry);
     });
+
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
     messageForm.reset();
 });
+
+
+const username = "omk963";
+const url = `https://api.github.com/users/${username}/repos`;
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Response Negative');
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    console.log(repositories);
+
+    const projectSection = document.querySelector('#projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for(let i = 0; i < repositories.length; i++) {
+        const project = document.createElement("li");
+        project.innerHTML = repositories[i].name;
+        projectList.appendChild(project);
+    }
+  })
+  .catch(error => console.error('Error:', error));
+
+  
